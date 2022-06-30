@@ -22,6 +22,9 @@ function LoadRecipes() {
         Fetch Posts
       </button>
       {children} */}
+      <div>
+        Get recipe by alphabet letter, type the letter you want to view:
+      </div>
 
       <button onClick={() => dispatch(fetchRecipes(newRecipe))}>
         Fetch new recipes
