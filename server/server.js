@@ -10,7 +10,7 @@ server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))
 })
 
-const recipeRoute = require('./routes/recipes')
+// const recipeRoute = require('./routes/recipes')
 
 // server.use('/api/v1/recipes', recipeRoute)
 

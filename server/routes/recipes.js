@@ -7,7 +7,7 @@ router.use(express.json())
 
 router.get('/', (req, res) => {
   request
-    .get(`www.themealdb.com/api/json/v1/1/search.php?f=a`)
+    .get(`https://www.themealdb.com/api/json/v1/1/search.php?f=a`)
     .then((result) => {
       res.json(result.body)
     })

@@ -1,4 +1,32 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
-function App() {}
+import { fetchRecipes } from '../actions'
+
+import Recipe from './Recipe'
+
+function LoadRecipes() {
+  const dispatch = useDispatch()
+  const recipesList = useSelector((state) => state.recipes.data)
+
+  return (
+    <div>
+      <button
+        onClick={() => {
+          dispatch(fetchRecipes())
+        }}
+      >
+        Fetch Recipes
+      </button>
+
+      <div>
+        {' '}
+        {recipesList.map((recipe, i) => (
+          <Recipe key={i} strMeal={recipe.strMeal} />
+        ))}{' '}
+      </div>
+    </div>
+  )
+}
+
+export default LoadRecipes
