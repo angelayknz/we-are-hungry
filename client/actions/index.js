@@ -27,11 +27,11 @@ export function requestRecipesError(err) {
   }
 }
 
-export function fetchRecipes() {
+export function fetchRecipes(a) {
   return (dispatch) => {
     dispatch(requestRecipes())
     return request
-      .get('https://www.themealdb.com/api/json/v1/1/search.php?f=b')
+      .get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${a}`)
       .set('Accept', 'application/json')
       .then((res) => {
         dispatch(recieveRecipes(res.body.meals))
