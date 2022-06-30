@@ -1,7 +1,12 @@
 import React from 'react'
 
-function Recipe({ strMeal }) {
-  return <div>{strMeal}</div>
+function Recipe({ strMeal, image }) {
+  return (
+    <div>
+      {strMeal}
+      <img src={image} alt="" />
+    </div>
+  )
 }
 
 export default Recipe
