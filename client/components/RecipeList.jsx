@@ -5,7 +5,7 @@ import { fetchRecipes } from '../actions'
 
 import Recipe from './Recipe'
 
-function LoadRecipes() {
+function LoadRecipesList() {
   const dispatch = useDispatch()
   const recipesList = useSelector((state) => state.recipes.data)
 
@@ -33,4 +33,4 @@ function LoadRecipes() {
   )
 }
 
-export default LoadRecipes
+export default LoadRecipesList

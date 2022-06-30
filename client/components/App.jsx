@@ -1,6 +1,8 @@
 import React from 'react'
 
-import LoadRecipes from './RecipeList'
+import LoadRecipesList from './RecipeList'
+import LoadRecipes from './LoadRecipes'
+
 function App() {
   return (
     <>
