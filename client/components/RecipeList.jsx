@@ -22,7 +22,11 @@ function LoadRecipes() {
       <div>
         {' '}
         {recipesList.map((recipe, i) => (
-          <Recipe key={i} strMeal={recipe.strMeal} />
+          <Recipe
+            key={i}
+            strMeal={recipe.strMeal}
+            image={recipe.strMealThumb}
+          />
         ))}{' '}
       </div>
     </div>

@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>My Collection</h1>
+        <h1>Recipes</h1>
       </header>
       <LoadRecipes />
       <section className="main">{/* add your code here */}</section>

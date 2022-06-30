@@ -31,7 +31,7 @@ export function fetchRecipes() {
   return (dispatch) => {
     dispatch(requestRecipes())
     return request
-      .get('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+      .get('https://www.themealdb.com/api/json/v1/1/search.php?f=b')
       .set('Accept', 'application/json')
       .then((res) => {
         dispatch(recieveRecipes(res.body.meals))
